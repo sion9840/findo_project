@@ -6,41 +6,35 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final Color _primary_color = const Color(0xff7950f2);
-
-  final MaterialColor _primary_material_color = const MaterialColor(
-    0xff7950f2,
-    const <int, Color>{
-      50: const Color(0xff7950f2),
-      100: const Color(0xff7950f2),
-      200: const Color(0xff7950f2),
-      300: const Color(0xff7950f2),
-      400: const Color(0xff7950f2),
-      500: const Color(0xff7950f2),
-      600: const Color(0xff7950f2),
-      700: const Color(0xff7950f2),
-      800: const Color(0xff7950f2),
-      900: const Color(0xff7950f2),
-    },
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: _primary_material_color,
-        primaryColor: _primary_material_color,
+        primarySwatch: Colors.deepOrange,
+        primaryColor: Colors.deepOrange,
+        backgroundColor: Colors.white,
         textTheme: TextTheme(
-          title: TextStyle(
-            fontSize: 90,
-            color: _primary_color,
+          headline1: TextStyle(
+            fontSize: 36,
+            color: Colors.white
+          ),
+          headline2: TextStyle(
+            fontSize: 24,
+            color: Colors.black,
+          ),
+          headline3: TextStyle(
+            fontSize: 18,
+            color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
-          subtitle: TextStyle(
-            fontSize: 90,
+          bodyText1: TextStyle(
+            fontSize: 18,
+            color: Colors.black,
+          ),
+          bodyText2: TextStyle(
+            fontSize: 18,
             color: Colors.white,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),
